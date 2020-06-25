@@ -5,6 +5,7 @@ import NavComponent from './NavComponent';
 import AddData from './AddData';
 import UpdateData from './UpdateData';
 import DeleteData from './DeleteData';
+import DatabaseView from './DatabaseView';
 
 const Main = () => {
 	return(
@@ -16,6 +17,7 @@ const Main = () => {
 						<Route exact path='/' component={AddData} />
 						<Route path='/update' component={UpdateData} />
 						<Route path='/delete' component={DeleteData} />
+						<Route path='/view' component={DatabaseView} />
 					</Switch>
 				</BrowserRouter>
 			</div>
