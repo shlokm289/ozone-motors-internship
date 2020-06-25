@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "ozone-motors-internship",
+  "private_key_id": "ff57780b2d0a7b37d21ef244039f07714e87f0db",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCjVIUttGDzBOCY\ngzHpqZO10bMAxF9p5LXFZc0ubhUGuf8ERKqjnCn5VGps94tUP35pgds8gry5J6OZ\njiqgg3rkypv9EJctTWhtIfvL+5137UX7mmHca6/mTIg1+UEjpB72tHI943TqnEvt\nSFOBYD62oCnIRS5VB4+JemBEh/n1nTQSnHPQwkhSAjyIQ6pFFe3t29IFUXcit8FH\n2ujNwCSKR7rAbRkE9v8RRqKbg2lrBbRY90m7GvYisWu18SoT7HsB6ZPkbHciCK6s\nawzB35A7BsRwZMUtvHv7GP4jUFM6uTW5HwhWJ5KdWjMr/gKb8B4CozXM9+UIhjFQ\n4RDxZgzBAgMBAAECggEAD8LqmIQtTZECl3/O7kHmC4gGonlQzSg7/lDvoZ5lOwvx\n4cM6mvqeoP1AyUPY1zLKtnsd4VNVy6GuoPUzhIqLmSPlimCdJiBahnA0G0rXDFQC\nX+BVt0P7v9lSKls4/6vT18eGtWrgxSR7aJTah26hPqsVZ8p9SR6nVFinN5XOTPb3\nfInDLiaFD7/D0Jc1kwrwQVCWsaElcGxYau1931KvtEfaCK+XtraUAiR0UGIGPH9V\nFxKT5bXCuTdKzYiE8F0vQCHpJLILM//qkNJCK7iuaJNw6Q9TvunlfXaN0uNVFgvt\n6cln4peXsW/8zYWLSVz9g3DqjX2RTHZM3A2mLCftvQKBgQDVf+N0bUdEaKFEfAde\nyJodcRS6FJhLu9jm8WpPwEcCHZwBL0a+w6oWFOYa9Z1DJQWuqhDXX2PLG1dCydx1\neSfGt6djfObM4ry667bPuW3NWAs80O/rG+0bWJpCUB6C6kBD1zys2Ey+UOj2BcEC\n7t0rak/bRXO12ZDD2Qc1jzVB1wKBgQDD1/U6RmN5o7H4gXJvXfgSUoLK1VNnU9q0\nGfEH7lKSHqVlwSwqUOnQ+tjeIV85DEEustcNdeRaAwU1QwCYcx8Rax7hbuG0NAZ7\nRat35zQ3EDCQYu5uK8IA0iZpTFqoXDJ1tKE2slmEA89JsMu/WIslonD79Hdf56pJ\nTnYYWiiDJwKBgD4azZd4klqb9Q1u5tXzlKEr29OlWgftxNKpNzuruvwqkM7nabTk\nRf3WZnlBKVX21whQAEYmQWk7ss6C2dZyP9fWZKLUGm9PJYdaOfuC/SXWjq5KOQAz\nR23FAFp54+ZBLiCN4+CDqw9RifLHCbZItZ2Dd2dZdKdZenr+DtLNrbhRAoGAcUPi\nKSzydTRORsoe8/fl9DrSOBr+nKDruQPT2eFk0et1fw8kyuh3Ag1CBd5JI0ZKIIcA\nR2GqisB6b55rpr/V9Q3+EyU81irMoNjfXX5TPZFYdPkyqncWQcFIw9eMCxkfeeHY\n5zho+yf058qfW/AKsd5r99wgelAStUjylgz2pzsCgYByd9/KIOFKXl41r2XaFW4T\nfwF5Kg5njPI/sALc6Ohibj53QV/GHW2bYhLpTUMODEYuKinheITqu2ceaBuoJhsg\ng1Vt50ibngacbSjYSdm2TPi25HXduKE1TcHEjxLKcRTPL+mgw+5aKG3VGJ0AeDG9\n1QJ8urvPn7PT0EPRgblnAg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-6j6kf@ozone-motors-internship.iam.gserviceaccount.com",
+  "client_id": "111427744478598229305",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-6j6kf%40ozone-motors-internship.iam.gserviceaccount.com"
+}
