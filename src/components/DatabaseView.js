@@ -18,7 +18,7 @@ const View = (props) => {
       counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
       if(counter == 0){
         updateData();
-        setTimeout(()=> window.location.reload(),500);
+        setTimeout(()=> window.location.reload(),1000);
       } 
     },[counter]);
 
