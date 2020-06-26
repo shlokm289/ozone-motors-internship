@@ -4,40 +4,53 @@ import { db } from '../firebase';
 const View = (props) => {
 	
 	const [colorData,setColorData] = useState([]);
-	const [loading,setLoading] = useState(true);
 
     React.useEffect(()=>{
-    	var list = [];
-    	const subscriber = db
-    						  .collection('data')
-    						  .onSnapshot((querySnap)=>{
-    						  	console.log(`Size : ${querySnap.size}`);
-    							querySnap.forEach((doc)=>{
-    								console.log(doc.id)
-    								list.push({
-    									...doc.data(),
-    									key: doc.id
-    								});
-    							});  	
-    						  console.log(list);
-    						  setColorData(list);
-    						  setLoading(false);	
-    					 })
-    	return () => subscriber();
+    	const fetchData = async() => {
+    		const colors = await db.collection('data').get();
+    		setColorData(colors.docs.map((doc) => doc.data()))
+    	}
+    	fetchData();
     },[]);
 
-    if(loading){
-    	return(
-    		<>
-    			<p>Loading ..</p>
-    		</>
-    	)
+    const PageReload = (props) => {
+
+        window.setInterval(()=>{
+          window .location.reload();
+        },10000);
+
+        return(
+          <>
+          </>
+        )
     }
 
 	return(
-  		<>
-  		
-  		</>
+    <>
+      <PageReload /> 
+  		<Table>
+  			<thead>
+  				<tr>
+  					<th>Sr.No</th>
+  					<th>Marker</th>
+  					<th>Latitude</th>
+  					<th>Longitude</th>
+  				</tr>
+  			</thead>
+  			<tbody>
+  			  {
+  				  colorData.map(color => (
+              <tr>
+                <th scope="row">{color.sr}</th>
+                <td>{color.color}</td>
+                <td>{(Math.random() * 100).toPrecision(5)}</td>
+                <td>{(Math.random() * 100).toPrecision(5)}</td>
+              </tr>
+  				  ))
+  			  }     
+        </tbody>
+  		</Table>
+    </>
   	)
 }
 

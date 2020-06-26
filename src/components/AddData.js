@@ -6,15 +6,12 @@ const AddData = (props) => {
   
   const [serialNo,setSerialNo] = React.useState();
   const [colorData,setColorData] = React.useState('');
-  const [latitude,setLatitude] = React.useState((Math.random() * 100).toPrecision(5));
-  const [longitude,setLongitude] = React.useState((Math.random() * 100).toPrecision(5));
 
   const addData = (event) => {
     event.preventDefault();
     db.collection('data').doc(serialNo).set({
       color: colorData,
-      lat: latitude,
-      lon: longitude
+      sr: serialNo
     }).
     then(()=>{
       setColorData('');  
