@@ -10,8 +10,6 @@ const View = (props) => {
   const [lon,setLon] = useState();
 
     React.useEffect(()=>{
-      getData();
-      setInterval(()=> getData(),10000);
     	const fetchData = async() => {
     		const colors = await db.collection('data').get();
     		setColorData(colors.docs.map((doc) => doc.data()))
@@ -19,17 +17,24 @@ const View = (props) => {
     	fetchData();
       counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
       if(counter == 0){
-        window .location.reload();
-      }
+        updateData();
+        setTimeout(()=> window.location.reload(),500);
+      } 
     },[counter]);
 
-    const getData = () => {
+    const updateData = async() => {
+      let ref = db.collection('data');
+      let snapShot = await ref.get();
+
+      snapShot.forEach(async(document) => {
       var url = 'https://us-central1-ozone-motors-internship.cloudfunctions.net/getData';
-      fetch(url).then(response => response.json())
-        .then(result => {
-            setLat(result.lat);
-            setLon(result.lon);
+      var response = await fetch(url);
+      var result = await response.json();
+        await ref.doc(document.id).update({
+          lat: result.lat,
+          lon: result.lon
         })
+      })
     }
 
 	return(
@@ -49,8 +54,8 @@ const View = (props) => {
               <tr>
                 <th scope="row">{color.sr}</th>
                 <td>{color.color}</td>
-                <td>{lat}</td>
-                <td>{lon}</td>
+                <td>{color.lat}</td>
+                <td>{color.lon}</td>
               </tr>
   				  ))
   			  }     
